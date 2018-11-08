@@ -20,10 +20,10 @@ var x2 = (y2 = 0);
 
 csv.fromPath(file, { headers: true })
 	.on("data", function(data, a) {
-		// var x = data.gaze_point_3d_x;
-		// var y = data.gaze_point_3d_y;
-		var x = data.norm_pos_x * width;
-		var y = data.norm_pos_y * height;
+		var x = data.gaze_point_3d_x;
+		var y = data.gaze_point_3d_y;
+		// var x = data.norm_pos_x * width;
+		// var y = data.norm_pos_y * height;
 
 		if (!x && !y) return;
 		if (i++ % num == 0) {
